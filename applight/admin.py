@@ -10,7 +10,8 @@ from .models import (
     Testimonials,
     FAQ,
     Block,
-    Contact
+    Contact,
+    FormSubmission
 )
 
 
@@ -63,6 +64,12 @@ class FeaturesCentralAdmin(admin.ModelAdmin):
             return False
 
         return super().has_add_permission(request)
+    
+    
+@admin.register(FormSubmission)
+class FormSubmissionAdmin(admin.ModelAdmin):
+    list_display = ("full_name", "email", "subject", "submitted_at")
+
 
 
 admin.site.register(Team)

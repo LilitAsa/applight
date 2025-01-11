@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.shortcuts import render, get_object_or_404
 from .models import (
     Banner,
@@ -8,10 +9,27 @@ from .models import (
     Testimonials,
     FAQ,
     Block,
-    Contact
+    Contact,
+    FormSubmission
 )
 
 def index(request):
+    
+    if request.method == "POST":
+        full_name = request.POST.get("full-name")
+        email = request.POST.get("email")
+        subject = request.POST.get("subject", "")
+        message = request.POST.get("message")
+      
+        FormSubmission.objects.create(
+            full_name=full_name,
+            email=email,
+            subject=subject,
+            message=message
+        )
+        
+        messages.success(request, "Your message has been sent successfully !")
+    
     banner = get_object_or_404(Banner)
     about = About.objects.all()
     watchNow = get_object_or_404(WatchNow)
@@ -36,6 +54,6 @@ def index(request):
         "contact": contact
     }
 
-    print(1)
-    print(block)
     return render(request, "base.html", data)
+
+
