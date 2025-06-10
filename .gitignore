@@ -1,4 +1,4 @@
 djangovenv
+.venv
 .idea
 __pycache__
-base/__pycache__

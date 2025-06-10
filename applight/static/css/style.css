@@ -42,8 +42,6 @@ h6 {
 .navbar .active {
 	color: #5f0099 !important;
 }
-.navbar .navbar-brand {
-}
 .navbar .nav-item {
 	margin: 0 5px;
 	padding: 0;
@@ -218,7 +216,7 @@ h6 {
 	text-decoration:none;
 }
 .video-section {
-	background: url(images/video-bg.jpg) no-repeat fixed center;
+	background: url(../img/video-bg.jpg) no-repeat fixed center;
 	background-size: cover;
 	overflow: hidden;
 }
@@ -290,8 +288,6 @@ h6 {
 .single-feature p {
 	font-size: 13px;
 }
-.icon-border {
-}
 .icon-border span {
 	display: block;
 	position: relative;
@@ -334,17 +330,17 @@ h6 {
 	top: 0;
 	width: 100%;
 	height: 100%;
-	background: url(images/pattern.png);
+	background: url(../img/pattern.png);
 }
 .bx-prev {
 	left: -90px !important;
-	background: url(images/arrow-left.png) no-repeat !important;
+	background: url(../img/arrow-left.png) no-repeat !important;
 	background-size: auto auto !important;
 	background-size: 100% 100% !important;
 }
 .bx-next {
 	right: -90px !important;
-	background: url(images/arrow-right.png) no-repeat !important;
+	background: url(../img/arrow-right.png) no-repeat !important;
 	background-size: auto auto !important;
 	background-size: 100% 100% !important;
 }
@@ -468,7 +464,7 @@ input {
 	top: 0;
 	width: 100%;
 	height: 100%;
-	background: url(images/pattern.png);
+	background: url(../img/pattern.png);
 }
 .download ul {
 	list-style: none;
